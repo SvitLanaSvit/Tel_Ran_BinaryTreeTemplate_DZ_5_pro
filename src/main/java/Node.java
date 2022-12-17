@@ -23,7 +23,7 @@ public class Node<T extends Comparable<T>>{
     public void insert(Node<T> node, T value) {
         if (isNotExists(node))
             createNode(node, value);
-        else if (value.compareTo(node.value) < 0) {  ///
+        else if (value.compareTo(node.value) < 0) {
             insert(node.left, value);
         } else
             insert(node.right, value);
@@ -33,10 +33,10 @@ public class Node<T extends Comparable<T>>{
         if (isNotExists(node)) {
             return null;
         }
-        if (value.compareTo(node.value) == 0) {   ///
+        if (value.compareTo(node.value) == 0) {
             return node;
         }
-        if (value.compareTo(node.value) < 0) { ///
+        if (value.compareTo(node.value) < 0) {
             return search(node.left, value);
         }
         return search(node.right, value);
